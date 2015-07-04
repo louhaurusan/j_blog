@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
+    <link rel="stylesheet" href="{% static "css/blog.css" %}">
+</head>
+
+
+<body>
+    <div class="page-header">
+        <h1><a href="/">Jeannou in the Philippines</a></h1>
+    </div>
+
+<!--    <div class="content">
+{% for post in latest_post_list %}
+        <div class="post">
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>published: {{ post.published_date }}</p>
+            <p>{{ post.text|linebreaks }}</p>
+        </div>
+{% endfor %}
+    </div>-->
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
